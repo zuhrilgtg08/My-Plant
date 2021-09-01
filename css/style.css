@@ -55,7 +55,6 @@ section {
     background: #333;
 }
 
-.header-1,
 .header-2,
 .header-3 {
     display: flex;
@@ -65,31 +64,11 @@ section {
     background: var(--hijau);
 }
 
-.header-1 {
-    border-bottom: .1rem solid rgba(255, 255, 255, .2);
-}
-
 .header-3 {
     background: #fff;
     box-shadow: 0 .5rem 1rem rgba(0, 0, 0, .1);
     position: relative;
     z-index: 10000;
-}
-
-.header-1 span {
-    font-weight: lighter;
-    color: #fff;
-    font-size: 2rem;
-}
-
-.header-1 a {
-    padding: 0 .7rem;
-    color: #fff;
-    font-size: 2rem;
-}
-
-.header-1 a:hover {
-    color: yellow;
 }
 
 .header-2 .logo {
@@ -615,7 +594,6 @@ section {
 
 @media (max-width: 991px) {
 
-    .header-1,
     .header-2,
     .header-3 {
         padding: 2rem;
