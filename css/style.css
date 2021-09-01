@@ -1,0 +1,710 @@
+@import url('https://fonts.googleapis.com/css2?family=Nunito:wght@200;300;400;600;700&display=swap');
+
+:root {
+    --hijau: #3a9943;
+}
+
+* {
+    font-family: 'Nunito', sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-transform: capitalize;
+    outline: none;
+    border: none;
+    text-decoration: none;
+    transition: all .2s linear;
+}
+
+*::selection {
+    background: var(--hijau);
+    color: #fff;
+}
+
+html {
+    font-size: 62.5%;
+    overflow-x: hidden;
+    scroll-behavior: smooth;
+    scroll-padding-top: 7rem;
+}
+
+section {
+    padding: 1.5rem 9%;
+}
+
+.heading {
+    font-size: 3rem;
+    color: #444;
+    padding-left: 1rem;
+    border-left: .4rem solid var(--hijau);
+    margin-top: 1rem;
+    margin-bottom: 3rem;
+}
+
+.btn {
+    display: inline-block;
+    margin-top: 1rem;
+    padding: .8rem 3rem;
+    background: var(--hijau);
+    color: #fff;
+    font-size: 1.7rem;
+    cursor: pointer;
+}
+
+.btn:hover {
+    background: #333;
+}
+
+.header-1,
+.header-2,
+.header-3 {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 2rem 9%;
+    background: var(--hijau);
+}
+
+.header-1 {
+    border-bottom: .1rem solid rgba(255, 255, 255, .2);
+}
+
+.header-3 {
+    background: #fff;
+    box-shadow: 0 .5rem 1rem rgba(0, 0, 0, .1);
+    position: relative;
+    z-index: 10000;
+}
+
+.header-1 span {
+    font-weight: lighter;
+    color: #fff;
+    font-size: 2rem;
+}
+
+.header-1 a {
+    padding: 0 .7rem;
+    color: #fff;
+    font-size: 2rem;
+}
+
+.header-1 a:hover {
+    color: yellow;
+}
+
+.header-2 .logo {
+    font-weight: bolder;
+    font-size: 3rem;
+    color: #fff;
+}
+
+.header-2 .logo i {
+    color: yellow;
+}
+
+.header-2 .search-bar-container {
+    display: flex;
+    align-items: center;
+    width: 50rem;
+    padding: 1.5rem;
+    background: rgba(255, 255, 255, .2);
+    border-radius: .5rem;
+}
+
+.header-2 .search-bar-container #search-bar {
+    width: 100%;
+    background: none;
+    text-transform: none;
+    color: #fff;
+    font-size: 1.7rem;
+}
+
+.header-2 .search-bar-container #search-bar::placeholder {
+    text-transform: capitalize;
+    color: #ddd;
+}
+
+.header-2 .search-bar-container label {
+    color: #fff;
+    cursor: pointer;
+    font-size: 2rem;
+    padding: 0 .5rem;
+}
+
+.header-2 .search-bar-container label:hover {
+    color: yellow;
+}
+
+.header-3 .navbar a {
+    color: #666;
+    font-size: 2rem;
+    margin-right: 2rem;
+}
+
+.header-3 .icons a {
+    color: #666;
+    font-size: 2.5rem;
+    margin-left: 2rem;
+}
+
+.header-3 a:hover {
+    color: var(--hijau);
+}
+
+#menu-bar {
+    font-size: 3rem;
+    color: #666;
+    border-radius: .5rem;
+    padding: .5rem 1.5rem;
+    border: .1rem solid #666;
+    cursor: pointer;
+    display: none;
+}
+
+.header-3.active {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+}
+
+.home {
+    padding-top: 0;
+}
+
+.home .home-slider {
+    box-shadow: 0 .5rem 1rem rgba(0, 0, 0, .1);
+    border: 1rem solid rgba(0, 0, 0, .2);
+    border-top: 0;
+}
+
+.home .home-slider .kotak {
+    background-size: cover !important;
+    background-position: center !important;
+    min-height: 55rem;
+    position: relative;
+}
+
+.home .home-slider .kotak .content {
+    position: absolute;
+    top: 50%;
+    left: 5%;
+    transform: translateY(-50%);
+    max-width: 50rem;
+}
+
+.home .home-slider .kotak .content span {
+    font-size: 3rem;
+    color: #444;
+}
+
+.home .home-slider .kotak .content h3 {
+    font-size: 6rem;
+    color: #333;
+    padding: .5rem 0;
+}
+
+.banner-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1.5rem;
+}
+
+.banner-container .banner {
+    flex: 1 1 40rem;
+    height: 25rem;
+    border: .1rem solid rgba(0, 0, 0, .3);
+    box-shadow: 0 .5rem 1rem rgba(0, 0, 0, .1);
+    overflow: hidden;
+    position: relative;
+}
+
+.banner-container .banner .content {
+    position: absolute;
+    top: 50%;
+    left: 4%;
+    transform: translateY(-50%);
+}
+
+.banner-container .banner img {
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+}
+
+.banner-container .banner .content span {
+    color: #666;
+    font-size: 1.7rem;
+}
+
+.banner-container .banner .content h3 {
+    color: #333;
+    font-size: 3rem;
+}
+
+.banner-container .banner:hover img {
+    transform: scale(1.1);
+    cursor: pointer;
+}
+
+.category .container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1.5rem;
+}
+
+.category .container .kotak {
+    position: relative;
+    flex: 1 1 23rem;
+    height: 35rem;
+    overflow: hidden;
+    border: .1rem solid rgba(0, 0, 0, .3);
+    box-shadow: 0 .5rem 1rem rgba(0, 0, 0, .1);
+}
+
+.category .container .kotak img {
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+}
+
+.category .container .kotak .content {
+    position: absolute;
+    bottom: -5.5rem;
+    background: #fff;
+    border-top: .1rem solid rgba(0, 0, 0, .3);
+    text-align: center;
+    padding: .5rem 0;
+    width: 100%;
+}
+
+.category .container .kotak:hover .content {
+    bottom: 0;
+    cursor: pointer;
+}
+
+.category .container .kotak .content h3 {
+    color: #333;
+    font-size: 2.5rem;
+    padding: .5rem 0;
+}
+
+.category .container .kotak .content .btn {
+    margin-bottom: 1.3rem;
+}
+
+.product .container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 2rem;
+}
+
+.product .container .kotak {
+    flex: 1 1 30rem;
+    border: .1rem solid rgba(0, 0, 0, .3);
+    box-shadow: 0 .5rem 1rem rgba(0, 0, 0, .2);
+    text-align: center;
+    position: relative;
+    overflow: hidden;
+}
+
+.product .container .kotak img {
+    height: 30rem;
+    width: 100%;
+    border-bottom: .1rem solid rgba(0, 0, 0, .3);
+    object-fit: cover;
+}
+
+.product .container .kotak .diskon {
+    position: absolute;
+    top: 1rem;
+    left: 1rem;
+    background: rgba(0, 255, 0, .1);
+    color: var(--hijau);
+    font-size: 2rem;
+    padding: .5rem 1rem;
+}
+
+.product .container .kotak .icons {
+    position: absolute;
+    top: 1rem;
+    right: -8rem;
+    display: flex;
+    flex-flow: column;
+    background: #fff;
+    border-radius: 5rem;
+    padding: .5rem;
+    box-shadow: 0 .5rem 1rem rgba(0, 0, 0, .1);
+}
+
+.product .container .kotak:hover .icons {
+    right: 1rem;
+    transition: .3s all ease;
+}
+
+.product .container .kotak .icons a {
+    height: 4rem;
+    width: 4rem;
+    line-height: 4rem;
+    font-size: 1.7rem;
+    color: #333;
+    border-radius: 5rem;
+    margin: .1rem;
+}
+
+.product .container .kotak .icons a:hover {
+    color: #fff;
+    background: var(--hijau);
+}
+
+.product .container .kotak h3 {
+    color: #333;
+    font-size: 2.5rem;
+    padding: 1rem 0;
+}
+
+.product .container .kotak .bintang i {
+    color: gold;
+    font-size: 2rem;
+}
+
+.product .container .kotak .kuantitas {
+    padding: 1rem 0;
+}
+
+.product .container .kotak .kuantitas span {
+    font-size: 2rem;
+}
+
+.product .container .kotak .kuantitas input {
+    font-size: 2rem;
+    padding: .5rem;
+    text-align: center;
+    background: rgba(0, 0, 0, .1);
+}
+
+.product .container .kotak .harga {
+    font-weight: bolder;
+    color: var(--hijau);
+    font-size: 2rem;
+}
+
+.product .container .kotak .harga span {
+    text-decoration: line-through;
+    color: #aaa;
+    font-size: 1.5rem;
+}
+
+.product .container .kotak .btn {
+    display: block;
+    margin: 2rem;
+    border-radius: 5rem;
+}
+
+.icons-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 2rem;
+}
+
+.icons-container .icon {
+    padding: 2rem 0;
+    display: flex;
+    align-items: center;
+    flex: 1 1 25rem;
+}
+
+.icons-container .icon .content {
+    padding-left: 2rem;
+}
+
+.icons-container .icon .content h3 {
+    font-size: 2rem;
+    color: var(--hijau);
+}
+
+.icons-container .icon .content p {
+    font-size: 1.5rem;
+    color: #666;
+}
+
+.agreed .baris {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1.5rem;
+    align-items: center;
+}
+
+.agreed .baris .image {
+    flex: 1 1 40rem;
+}
+
+.agreed .baris .image img {
+    width: 100%;
+}
+
+.agreed .baris .content {
+    flex: 1 1 40rem;
+}
+
+.agreed .baris .content .title {
+    font-size: 3.5rem;
+    color: #333;
+}
+
+.agreed .baris .content p {
+    font-size: 1.5rem;
+    color: #666;
+    padding: 1rem 0;
+}
+
+.agreed .baris .content .hitung-mundur {
+    display: flex;
+    padding: 1rem 0;
+    gap: 1.5rem;
+}
+
+.agreed .baris .content .hitung-mundur .kotak {
+    width: 9rem;
+    text-align: center;
+    border: .1rem solid rgba(0, 0, 0, .3);
+}
+
+.agreed .baris .content .hitung-mundur .kotak h3 {
+    font-size: 5rem;
+    color: #333;
+}
+
+.agreed .baris .content .hitung-mundur .kotak span {
+    font-size: 1.7rem;
+    color: #fff;
+    display: block;
+    background: #666;
+    padding: .5rem;
+}
+
+.contact .baris {
+    display: flex;
+    flex-wrap: wrap;
+    border: .1rem solid rgba(0, 0, 0, .3);
+}
+
+.contact .baris .map {
+    width: 100%;
+    flex: 1 1 40rem;
+}
+
+.contact .baris form {
+    padding: 2rem;
+    flex: 1 1 40rem;
+}
+
+.contact .baris form .inputBox {
+    position: relative;
+}
+
+.contact .baris form .inputBox input,
+.contact .baris form .inputBox textarea {
+    width: 100%;
+    border-bottom: .1rem solid rgba(0, 0, 0, .3);
+    padding: 1rem 0;
+    margin: 1.5rem 0;
+    font-size: 1.7rem;
+    text-transform: none;
+    color: #333;
+}
+
+.contact .baris form .inputBox textarea {
+    resize: none;
+    height: 15rem;
+}
+
+.contact .baris form .inputBox input:focus,
+.contact .baris form .inputBox textarea:focus {
+    border-color: var(--hijau);
+}
+
+.contact .baris form .inputBox label {
+    position: absolute;
+    top: 2.3rem;
+    left: 0;
+    font-size: 1.7rem;
+}
+
+.contact .baris form .inputBox input:focus~label,
+.contact .baris form .inputBox textarea:focus~label,
+.contact .baris form .inputBox input:valid~label,
+.contact .baris form .inputBox textarea:valid~label {
+    top: -.1rem;
+    font-size: 1.5rem;
+    color: #999;
+}
+
+.footer .container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1.5rem;
+}
+
+.footer .container .kotak {
+    flex: 1 1 25rem;
+}
+
+.footer .container .kotak h3 {
+    color: #333;
+    font-size: 2.5rem;
+    padding: 1rem 0;
+}
+
+.footer .container .kotak p {
+    color: #999;
+    font-size: 1.5rem;
+    padding: 1rem 0;
+}
+
+.footer .container .kotak a {
+    display: block;
+    color: #666;
+    font-size: 1.5rem;
+    padding: 1rem 0;
+}
+
+.footer .container .kotak a:hover {
+    text-decoration: underline;
+    color: var(--hijau);
+}
+
+.footer .akhir {
+    font-size: 2rem;
+    padding: 1rem 2rem;
+    margin-top: 2rem;
+    border-top: .1rem solid rgba(0, 0, 0, .1);
+    text-align: center;
+    font-weight: normal;
+}
+
+.footer .akhir span {
+    color: var(--hijau);
+}
+
+.scroll-top {
+    position: fixed;
+    bottom: 7.5rem;
+    right: 2rem;
+    z-index: 1000;
+    font-size: 3.5rem;
+    background: rgba(0, 255, 0, .1);
+    color: var(--hijau);
+    border-radius: .5rem;
+    border: .1rem solid rgba(0, 0, 0, .2);
+    padding: .5rem 1.5rem;
+    display: none;
+}
+
+.scroll-top:hover {
+    background: var(--hijau);
+    color: #fff;
+}
+
+/* Media queris */
+@media (max-width:1200px) {
+    html {
+        font-size: 55%;
+    }
+}
+
+@media (max-width: 991px) {
+
+    .header-1,
+    .header-2,
+    .header-3 {
+        padding: 2rem;
+    }
+
+    section {
+        padding: 1.5rem;
+    }
+}
+
+@media (max-width:768px) {
+    #menu-bar {
+        display: initial;
+    }
+
+    .header-3 .navbar {
+        position: absolute;
+        top: 100%;
+        left: 0;
+        right: 0;
+        background: #eee;
+        padding: 1rem 2rem;
+        border-top: .1rem solid rgba(0, 0, 0, .3);
+        clip-path: polygon(0 0, 100% 0, 100% 0, 0 0);
+    }
+
+    .header-3 .navbar.active {
+        clip-path: polygon(0 0, 100% 0, 100% 100%, 0% 100%);
+    }
+
+    .header-3 .navbar a {
+        display: block;
+        margin: 1.5rem 0;
+        padding: 1.5rem;
+        border-radius: .5rem;
+        border: .1rem solid rgba(0, 0, 0, .3);
+        background: #fff;
+        text-align: center;
+    }
+
+    .header-2 {
+        flex-flow: column;
+    }
+
+    .header-2 .search-bar-container {
+        width: 100%;
+        margin-top: 2rem;
+    }
+
+    .home .home-slider .kotak {
+        background-position: right !important;
+        z-index: 0;
+    }
+
+    .home .home-slider .kotak::before {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 0;
+        height: 100%;
+        width: 100%;
+        z-index: -1;
+        background: rgba(255, 255, 255, .7);
+    }
+
+    .home .home-slider .kotak .content h3 {
+        font-size: 4.5rem;
+    }
+}
+
+@media (max-width: 450px) {
+    html {
+        font-size: 50%;
+    }
+
+    .hedear-1 {
+        display: none;
+    }
+
+    .agreed .baris .content .hitung-mundur .kotak {
+        width: 7rem;
+    }
+
+    .agreed .baris .content .hitung-mundur .kotak h3 {
+        font-size: 3rem;
+        padding: .5rem 0;
+    }
+
+    .agreed .baris .content .hitung-mundur .kotak span {
+        font-size: 1.5rem;
+    }
+}
