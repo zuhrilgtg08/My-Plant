@@ -3,24 +3,24 @@ let navbar = document.querySelector('.navbar');
 let header = document.querySelector('.header-3');
 let scrollTop = document.querySelector('.scroll-top');
 
-menu.addEventListener('click', () =>{
+menu.addEventListener('click', () => {
     menu.classList.toggle('fa-times');
     navbar.classList.toggle('active');
 });
 
-window.onscroll = () =>{
+window.onscroll = () => {
     menu.classList.remove('fa-times');
     navbar.classList.remove('active');
 
-    if(window.scrollY > 250){
+    if (window.scrollY > 250) {
         header.classList.add('active');
-    }else{
+    } else {
         header.classList.remove('active');
     }
 
-    if(window.scrollY > 250){
+    if (window.scrollY > 250) {
         scrollTop.style.display = 'initial';
-    }else{
+    } else {
         scrollTop.style.display = 'none';
     }
 };
@@ -38,29 +38,34 @@ var swiper = new Swiper(".home-slider", {
 
 });
 
-let countDate = new Date('december 30, 2021 00:00:00').getTime();
+const countDate = new Date('december 30, 2022 00:00:00').getTime();
 
-function countDown(){
+const eventTime = setInterval(function () {
     let now = new Date().getTime();
 
-    gap = countDate - now;
+    const gap = countDate - now;
 
     let second = 1000;
     let minute = second * 60;
     let hour = minute * 60;
     let day = hour * 24;
 
-    let d = Math.floor(gap / (day));
-    let h = Math.floor((gap % (day)) / (hour));
-    let m = Math.floor((gap % (hour)) / (minute));
-    let s = Math.floor((gap % (minute)) / (second));
+    const d = Math.floor(gap / (day));
+    const h = Math.floor((gap % (day)) / (hour));
+    const m = Math.floor((gap % (hour)) / (minute));
+    const s = Math.floor((gap % (minute)) / (second));
 
-    document.getElementById('day').innerText = d;
-    document.getElementById('hour').innerText = h;
-    document.getElementById('minute').innerText = m;
-    document.getElementById('second').innerText = s;
-}
+    const hari = document.getElementById('day');
+    const jam = document.getElementById('hour');
+    const menit = document.getElementById('minute');
+    const detik = document.getElementById('second');
+    hari.textContent = d;
+    jam.textContent = h;
+    menit.textContent = m;
+    detik.textContent = s;
 
-setInterval(function(){
-    countDown();
-},1000);
+    if (gap == 0) {
+        clearInterval(eventTime);
+        alert('Waktu Event Telah Habis');
+    }
+}, 1000);
